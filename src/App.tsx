@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import './App.css';
 import Header from '@/Components/Header';
+import GlobalStyles from './global.css';
 import ReadTheDocs from '@/Components/ReadTheDocs';
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
 
   return (
     <div className="App">
+      <GlobalStyles />
       <Header />
       <div className="card">
         <button type="button" onClick={() => setCount(count + 1)}>
