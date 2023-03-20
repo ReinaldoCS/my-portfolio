@@ -1,14 +1,54 @@
-import reactLogo from '@/Assets/react.svg';
-import viteLogo from '@/Assets/vite.svg';
+import { useState } from 'react';
+import { HamburgerButton } from './HamburgerButton';
+import { Logo } from './Logo';
+import { Container, Menu, Nav } from './styles';
 
 function Header() {
+  const [isActiveButton, setIsActiveButton] = useState(false);
+
+  function handleOnClickHamburger() {
+    setIsActiveButton(!isActiveButton);
+  }
+
+  const links = [
+    {
+      text: 'Início',
+      link: 'http://localhost:5173/',
+    },
+    {
+      text: 'Habilidades',
+      link: 'http://localhost:5173/',
+    },
+    {
+      text: 'Sobre mim',
+      link: 'http://localhost:5173/',
+    },
+    {
+      text: 'Projetos',
+      link: 'http://localhost:5173/',
+    },
+    {
+      text: 'Contato',
+      link: 'http://localhost:5173/',
+    },
+  ];
+
   return (
     <>
-      <div id="logos">
-        <img src={viteLogo} className="logo" data-testid="vite-logo" alt="Vite logo" />
-        <img src={reactLogo} className="logo react" data-testid="react-logo" alt="React logo" />
-      </div>
-      <h2>Vite + React + TypeScript + Eslint (Airbnb) + Eslint + Jest + Testing Library = ViteRC❤️‍🔥</h2>
+      <Container>
+        <Logo />
+        <Nav>
+          {links.map((item) => (
+            <a href={item.link}>{item.text}</a>
+          ))}
+        </Nav>
+        <HamburgerButton onClick={handleOnClickHamburger} isActive={isActiveButton} />
+      </Container>
+      <Menu isOpen={isActiveButton}>
+        {links.map((item) => (
+          <a href={item.link}>{item.text}</a>
+        ))}
+      </Menu>
     </>
   );
 }
