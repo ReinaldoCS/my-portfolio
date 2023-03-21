@@ -1,14 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HamburgerButton } from './HamburgerButton';
 import { Logo } from './Logo';
 import { Container, Menu, Nav } from './styles';
 
-function Header() {
+export function Header() {
   const [isActiveButton, setIsActiveButton] = useState(false);
-
-  function handleOnClickHamburger() {
-    setIsActiveButton(!isActiveButton);
-  }
+  const [backgroundTransparent, setBackgroundTransparent] = useState(true);
 
   const links = [
     {
@@ -33,9 +30,29 @@ function Header() {
     },
   ];
 
+  function handleScroll() {
+    const position = window.pageYOffset;
+    if (position > 100) {
+      setBackgroundTransparent(false);
+    } else {
+      setBackgroundTransparent(true);
+    }
+  }
+
+  function handleOnClickHamburger() {
+    setIsActiveButton(!isActiveButton);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <Container>
+      <Container isBackgroundTransparent={backgroundTransparent}>
         <Logo />
         <Nav>
           {links.map((item) => (
@@ -52,5 +69,3 @@ function Header() {
     </>
   );
 }
-
-export default Header;

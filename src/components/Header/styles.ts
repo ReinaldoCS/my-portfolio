@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
+export const Container = styled.header<{ isBackgroundTransparent: boolean }>`
   display: flex;
 
   height: 72px;
@@ -8,8 +8,13 @@ export const Container = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  position: relative;
-  /* background-color: var(--gray-700); */
+  position: fixed;
+  /* z-index: 1; */
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 0.5s;
+  background-color: ${(props) => !props.isBackgroundTransparent && 'var(--gray-800)'};
 
   @media (min-width: 1080px) {
     > button {
@@ -29,7 +34,7 @@ export const Menu = styled.div<{ isOpen: boolean }>`
   visibility: ${(props) => (props.isOpen ? 'visible' : 'hidden')};
   max-width: ${(props) => !props.isOpen && 'none'};
 
-  position: absolute;
+  position: fixed;
   top: 72px;
   left: 2rem;
   right: 2rem;
@@ -95,5 +100,6 @@ export const Nav = styled.nav`
   @media (max-width: 1080px) {
     visibility: hidden;
     max-width: none;
+    display: none;
   }
 `;
