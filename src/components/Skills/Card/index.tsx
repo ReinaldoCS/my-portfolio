@@ -1,12 +1,15 @@
-import typescriptImg from '@/Assets/skills/typescript.svg';
-
 import { Container } from './styles';
 
-export function Card() {
+interface CardProps {
+  imgUrl: string;
+  title: string;
+}
+
+export function Card({ imgUrl, title }: CardProps) {
   return (
     <Container>
-      <img src={typescriptImg} alt="Typescript" />
-      <p>Typescript</p>
+      <img src={imgUrl} alt={title} />
+      <p>{title}</p>
     </Container>
   );
 }
