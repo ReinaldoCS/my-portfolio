@@ -56,14 +56,18 @@ export function Header() {
         <Logo />
         <Nav>
           {links.map((item) => (
-            <a href={item.link}>{item.text}</a>
+            <a key={item.text} href={item.link}>
+              {item.text}
+            </a>
           ))}
         </Nav>
         <HamburgerButton onClick={handleOnClickHamburger} isActive={isActiveButton} />
       </Container>
       <Menu isOpen={isActiveButton}>
         {links.map((item) => (
-          <a href={item.link}>{item.text}</a>
+          <a key={item.text} href={item.link}>
+            {item.text}
+          </a>
         ))}
       </Menu>
     </>
