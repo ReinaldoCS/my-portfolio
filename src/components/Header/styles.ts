@@ -9,7 +9,7 @@ export const Container = styled.header<{ isBackgroundTransparent: boolean }>`
   justify-content: space-between;
 
   position: fixed;
-  /* z-index: 1; */
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -30,6 +30,8 @@ export const Menu = styled.div<{ isOpen: boolean }>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  z-index: 1;
 
   visibility: ${(props) => (props.isOpen ? 'visible' : 'hidden')};
   max-width: ${(props) => !props.isOpen && 'none'};
