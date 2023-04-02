@@ -1,4 +1,4 @@
-import SwiperCore, { Navigation, Pagination } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { slidesInformation } from './imports';
 import { Card } from '../Card';
@@ -7,14 +7,17 @@ import { Arrow } from '../Arrow';
 import { Container } from './styles';
 import 'swiper/css/pagination';
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 export function Carrossel() {
   return (
     <Container>
       <div>
         <Arrow className="swiper-button-prev" isLeft />
         <Swiper
-          loop
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           spaceBetween={50}
           slidesPerView={1}
           navigation={{
