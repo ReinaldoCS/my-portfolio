@@ -14,6 +14,7 @@ export function Carrossel() {
       <div>
         <Arrow className="swiper-button-prev" isLeft />
         <Swiper
+          loop
           spaceBetween={50}
           slidesPerView={1}
           navigation={{

@@ -29,11 +29,11 @@ export const slidesInformation: { id: number; img: string; title: string }[] = [
     img: cssImg,
     title: 'CSS',
   },
-  {
-    id: 3,
-    img: javascriptImg,
-    title: 'Javascript',
-  },
+  // {
+  //   id: 3,
+  //   img: javascriptImg,
+  //   title: 'Javascript',
+  // },
   {
     id: 4,
     img: typescriptImg,
