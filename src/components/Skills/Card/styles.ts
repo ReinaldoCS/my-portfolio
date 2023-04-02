@@ -6,13 +6,16 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  img {
+  margin-bottom: 2rem;
+
+  > img {
     width: 3rem;
   }
 
-  p {
+  > p {
     font-weight: 600;
     color: var(--white);
     margin-top: 0.5rem;
+    text-align: center;
   }
 `;

@@ -9,6 +9,7 @@ export default createGlobalStyle`
     --gray-700: #A8A29E;
     --gray-600: #CBC3BE;
 
+    --purple-500: #8B3DFF;
   }
 
   * {
