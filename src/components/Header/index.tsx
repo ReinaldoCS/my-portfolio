@@ -10,23 +10,23 @@ export function Header() {
   const links = [
     {
       text: 'Início',
-      link: 'http://localhost:5173/',
+      link: 'http://localhost:5173/#inicio',
     },
     {
       text: 'Habilidades',
-      link: 'http://localhost:5173/',
+      link: 'http://localhost:5173/#habilidades',
     },
     {
       text: 'Sobre mim',
-      link: 'http://localhost:5173/',
+      link: 'http://localhost:5173/#sobre-mim',
     },
     {
       text: 'Projetos',
-      link: 'http://localhost:5173/',
+      link: 'http://localhost:5173/#projetos',
     },
     {
       text: 'Contato',
-      link: 'http://localhost:5173/',
+      link: 'http://localhost:5173/#contato',
     },
   ];
 

@@ -5,7 +5,7 @@ import 'swiper/css';
 
 export function Skills() {
   return (
-    <Container>
+    <Container id="habilidades">
       <Content>
         <Header>
           <h2>Habilidades</h2>

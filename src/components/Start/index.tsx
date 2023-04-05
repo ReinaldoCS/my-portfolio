@@ -4,7 +4,7 @@ import { Background, Container, Information } from './styles';
 
 export function Start() {
   return (
-    <Background>
+    <Background id="inicio">
       <Container>
         <Information>
           <h2>Olá, meu nome é Reinaldo mas pode me chamar de Barry.</h2>

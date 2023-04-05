@@ -6,7 +6,7 @@ import { Information } from './Information';
 
 export function Contact() {
   return (
-    <S.Container>
+    <S.Container id="contato">
       <h2>Entre em contato</h2>
       <S.Content>
         <figure>

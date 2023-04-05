@@ -3,7 +3,7 @@ import { AboutStyled } from './about-styled';
 
 export function About() {
   return (
-    <AboutStyled.Container>
+    <AboutStyled.Container id="sobre-mim">
       <div>
         <h2>Sobre mim</h2>
 
