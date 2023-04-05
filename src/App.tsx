@@ -1,10 +1,12 @@
 import { Header } from '@/Components/Header';
-import GlobalStyles from './global.css';
 import { Start } from './components/Start';
 import { Skills } from './components/Skills';
 import { About } from './components/About';
 import { Project } from './components/Project';
 import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
+
+import GlobalStyles from './global.css';
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
       <About />
       <Project />
       <Contact />
+      <Footer />
     </div>
   );
 }
