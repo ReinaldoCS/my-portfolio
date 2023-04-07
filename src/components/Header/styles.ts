@@ -16,7 +16,7 @@ export const Container = styled.header<{ isBackgroundTransparent: boolean }>`
   transition: background-color 0.5s;
   background-color: ${(props) => !props.isBackgroundTransparent && 'var(--gray-800)'};
 
-  @media (min-width: 1080px) {
+  @media (min-width: 1081px) {
     > button {
       visibility: hidden;
       max-width: none;

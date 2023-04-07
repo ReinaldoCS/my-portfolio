@@ -65,7 +65,7 @@ export function Header() {
       </Container>
       <Menu isOpen={isActiveButton}>
         {links.map((item) => (
-          <a key={item.text} href={item.link}>
+          <a key={item.text} href={item.link} onClick={handleOnClickHamburger}>
             {item.text}
           </a>
         ))}
