@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.section`
+export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,7 @@ const Container = styled.section`
   }
 `;
 
-const Content = styled.div`
+export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +35,7 @@ const Content = styled.div`
   }
 `;
 
-const TextSession = styled.div`
+export const TextSession = styled.div`
   display: flex;
   flex-direction: column;
   text-align: justify;
@@ -47,9 +47,3 @@ const TextSession = styled.div`
     max-width: 550px;
   }
 `;
-
-export const AboutStyled = {
-  Container,
-  Content,
-  TextSession,
-};

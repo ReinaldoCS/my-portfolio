@@ -1,15 +1,15 @@
 import itIsMeImg from '@/Assets/iam.png';
-import { AboutStyled } from './about-styled';
+import * as S from './styles';
 
 export function About() {
   return (
-    <AboutStyled.Container id="sobre-mim">
+    <S.Container id="sobre-mim">
       <div>
         <h2>Sobre mim</h2>
 
-        <AboutStyled.Content>
+        <S.Content>
           <img src={itIsMeImg} alt="Reinaldo Correia" />
-          <AboutStyled.TextSession>
+          <S.TextSession>
             <p>Sou um desenvolvedor apaixonado por aprender e compartilhar conhecimentos.</p>
             <p>
               Atualmente, estou me especializando em desenvolvimento de aplicações web com React e TypeScript através do
@@ -26,9 +26,9 @@ export function About() {
               Meu objetivo é continuar aprimorando minhas habilidades em desenvolvimento de software e explorar novas
               tecnologias na indústria em constante mudança.
             </p>
-          </AboutStyled.TextSession>
-        </AboutStyled.Content>
+          </S.TextSession>
+        </S.Content>
       </div>
-    </AboutStyled.Container>
+    </S.Container>
   );
 }
